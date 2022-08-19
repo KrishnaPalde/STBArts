@@ -17,7 +17,6 @@ class Booking extends Model
         'ganesh_id',
         'ganesh_type',
         'ganesh_price',
-        'ganesh_color',
         'ganesh_image',
         'quantity',
         'total',

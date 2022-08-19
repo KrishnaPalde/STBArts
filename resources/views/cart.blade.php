@@ -50,7 +50,13 @@
 @if (Request()->session()->has('BookingStatus'))
         @if (Request()->session()->get('BookingStatus') == 'Successful')
             <div class="alert alert-success mt-4">
-                <img src="https://img.icons8.com/color/48/000000/verified-account.png"/> <span class="h-3"> Successfully Booked</span>
+                <img src="https://img.icons8.com/color/48/000000/verified-account.png"/> 
+                <h3>
+                    Successfully Booked
+                </h3>
+                <h3>
+                    We will contact you shortly for confirmation
+                </h3>
             </div>
         @endif
     @endif

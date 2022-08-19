@@ -49,7 +49,7 @@
                     <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
                     <input type="text" class="form-control" id="address2" name="address2" placeholder="Apartment or suite">
                 </div>
-                <center><button class="btn btn-primary btn-lg btn-block" type="submit">Continue to Payment</button></center>
+                <center><button class="btn btn-primary btn-lg btn-block" type="submit">Book Now</button></center>
             </form>
         </div>
     </div>

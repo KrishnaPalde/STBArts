@@ -28,7 +28,6 @@ class CartController extends Controller
         $ganeshId = Request()->query('id');
         $ganeshPrice = Request()->query('price');
         $ganeshType = Request()->query('type');
-        $ganeshColor = Request()->query('color');
         $ganeshImage = Request()->query('image');
 
         $cart = session()->get('cart', []);
@@ -39,7 +38,6 @@ class CartController extends Controller
             $cart[$ganeshId] = [
                 "type" => $ganeshType,
                 "quantity" => 1,
-                "color" => $ganeshColor,
                 "price" => $ganeshPrice,
                 "image" => $ganeshImage
             ];

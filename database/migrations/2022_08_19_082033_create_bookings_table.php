@@ -22,7 +22,6 @@ class CreateBookingsTable extends Migration
             $table->string('ganesh_id');
             $table->string('ganesh_type');
             $table->string('ganesh_price');
-            $table->string('ganesh_color');
             $table->string('ganesh_image');
             $table->string('quantity');
             $table->integer('total');

@@ -12,13 +12,13 @@
       $img = $img[0];
     @endphp --}}
     <div class="left-column">
-      @foreach ( Request()->query('data')[4] as $colorData)
-        @if ($loop->first)
-          <img data-image="{{ $colorData }}" class="active" src="../images/{{ Request()->query('data')[0] . '-' . $colorData }}.jpeg" alt="">
-        @else
-          <img data-image="{{ $colorData }}" src="../images/{{ Request()->query('data')[0] . '-' . $colorData }}.jpeg" alt="">
+      {{-- @foreach ( Request()->query('data')[4] as $colorData)
+        @if ($loop->first) --}}
+          <img class="active" src="../popImages/{{ Request()->query('data')[0]}}.jpeg" alt="">
+        {{-- @else --}}
+          {{-- <img data-image="{{ $colorData }}" src="../images/{{ Request()->query('data')[0]}}.jpeg" alt="">
         @endif
-      @endforeach
+      @endforeach --}}
       {{-- <img data-image="red" class="active" src="../images/red.jpeg" alt="">
       <img data-image="black" src="../images/black.png" alt="">
       <img data-image="blue" src="../images/blue.png" alt=""> --}}
@@ -38,18 +38,18 @@
         <h1>Ganesh Murti</h1>
       </div>
 
-      <!-- Product Configuration -->
-      <div class="product-configuration">
+      <form action="{{ route('cart.create') }}">
+      {{-- <!-- Product Configuration -->
+      <div class="product-configuration"> --}}
 
-        <form action="{{ route('cart.create') }}">
-        <!-- Product Color -->
+        {{-- <!-- Product Color -->
         <div class="product-color">
           <span>Color</span>
 
           <div class="color-choose">
             @foreach (Request()->query('data')[4] as $colorData )
             {{-- {{ dd($colorData) }} --}}
-                @if ($loop->first)
+                {{-- @if ($loop->first)
                     <div>
                         <input data-image="{{ $colorData }}" type="radio" id="{{ $colorData }}" name="color" value="{{ $colorData }}" checked>
                         <label for="{{ $colorData }}"><span></span></label>
@@ -58,9 +58,9 @@
                     <div>
                         <input data-image="{{ $colorData }}" type="radio" id="{{ $colorData }}" name="color" value="{{ $colorData }}" >
                         <label for="{{ $colorData }}"><span></span></label>
-                    </div>
-                @endif
-            @endforeach
+                    </div> --}}
+                {{-- @endif
+            @endforeach --}} 
             {{-- <div>
               <input data-image="red" type="radio" id="red" name="color" value="red" checked>
               <label for="red"><span></span></label>
@@ -73,9 +73,9 @@
               <input data-image="black" type="radio" id="black" name="color" value="black">
               <label for="black"><span></span></label>
             </div> --}}
-          </div>
+          {{-- </div> --}}
 
-        </div>
+        {{-- </div> --}}
 
       <!-- Product Pricing -->
       <div class="product-price">

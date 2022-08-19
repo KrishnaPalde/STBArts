@@ -16,7 +16,6 @@ class BookingController extends Controller
         $ganesh_id = "";
         $ganesh_type = "";
         $ganesh_price = "";
-        $ganesh_color = "";
         $ganesh_image = "";
         $ganesh_quantity = "";
         foreach(session()->get('cart') as $key=>$value)
@@ -24,14 +23,12 @@ class BookingController extends Controller
             $ganesh_id = $ganesh_id . $key . " ";
             $ganesh_type = $ganesh_type . $value['type'] . " ";
             $ganesh_price = $ganesh_price . $value['price'] . " ";
-            $ganesh_color = $ganesh_color . $value['color'] . " ";
             $ganesh_image = $ganesh_image . $value['image'] . " ";
             $ganesh_quantity = $ganesh_quantity . $value['quantity'] . " ";
         }
         $booking->ganesh_id = $ganesh_id;
         $booking->ganesh_type = $ganesh_type;
         $booking->ganesh_price = $ganesh_price;
-        $booking->ganesh_color = $ganesh_color;
         $booking->ganesh_image = $ganesh_image;
         $booking->quantity = $ganesh_quantity;
         $booking->total = session()->get('total');
